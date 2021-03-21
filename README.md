@@ -2,11 +2,13 @@ REST Application
 
 It is a school based REST Application where CURD Operation can be performed using RESt APIs.
 REST API Definition:
-	
+
+
 To get All the students List: 
 	HTTP Method: GET
 	URL: http://localhost:8080/restapp/students
 	RESPONSE: JSON/XML Format having all the students.
+
 
 To get specific student: 
 	HTTP Method: GET
