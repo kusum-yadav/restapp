@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "2db2c06c-57d3-4ad3-8d7c-ca075eeb61d4",
+		"name": "Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "restapp_getstudents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/sample/restapp/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"restapp",
+						"students"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
