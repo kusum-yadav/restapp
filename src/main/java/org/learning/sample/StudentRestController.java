@@ -3,6 +3,7 @@ package org.learning.sample;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -39,5 +40,12 @@ public class StudentRestController {
 	public List<Student> addStudent(Student student) {
 		return studentDao.addStudent(student);
 
+	}
+
+	@Path("/{studentId}")
+	@DELETE
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Student> deleteStudent(@PathParam("studentId") int studentId) {
+		return studentDao.deleteStudent(studentId);
 	}
 }

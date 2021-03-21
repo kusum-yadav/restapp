@@ -34,5 +34,15 @@ public class StudentDao {
 		list.add(s);
 		return list;
 	}
+	public List<Student> deleteStudent(int id)
+	{
+		for (Student s : list) {
+			if (s.getStudentId() == id) {
+				list.remove(s);
+				return list;
+			}
+		}
+		return null;
+	}
 
 }
