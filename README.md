@@ -18,3 +18,4 @@ To Add a student in existing List:
 	HTTP Method: POST
 	URL: http://localhost:8080/sample/restapp/students
 	RESPONSE: JSON/XML Format having all the Student list [Including new Student
+![image](https://user-images.githubusercontent.com/37165268/111900525-11c86400-8a59-11eb-97a5-4ead0c7446da.png)
