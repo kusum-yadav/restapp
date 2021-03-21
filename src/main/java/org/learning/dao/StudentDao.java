@@ -44,5 +44,22 @@ public class StudentDao {
 		}
 		return null;
 	}
+	
+	
+	public List<Student> updateStudent(Student student)
+	{
+		for(Student s:list)
+		{
+			if(s.getStudentId()==student.getStudentId())
+			{
+				list.remove(s);
+				list.add(student);
+				return list;
+			}
+		}
+		return null;
+		
+		
+	}
 
 }
