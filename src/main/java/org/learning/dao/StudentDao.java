@@ -21,5 +21,16 @@ public class StudentDao {
 	 return list;
  }
  
+ public Student getStudent(int id)
+ { 
+	 for(Student s:list)
+	 {
+		 if(s.getStudentId()==id)
+		 {
+			 return s;
+		 }
+	 }
+	return null;
+ }
 
 }
