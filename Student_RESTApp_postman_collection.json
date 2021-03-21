@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2db2c06c-57d3-4ad3-8d7c-ca075eeb61d4",
+		"_postman_id": "febd803e-50c6-4947-b701-b9ff131fa3fc",
 		"name": "Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -13,9 +13,68 @@
 					{
 						"key": "Accept",
 						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/sample/restapp/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"restapp",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restapp_getstudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/restapp/students/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"restapp",
+						"students",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restapp_addstudent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
 						"type": "text"
 					}
 				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"xyz\",\r\n    \"age\": 10,\r\n    \"gender\": \"Male\",\r\n    \"name\": \"Prabhu22\",\r\n    \"studentId\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8080/sample/restapp/students",
 					"protocol": "http",
