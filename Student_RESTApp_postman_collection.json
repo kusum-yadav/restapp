@@ -90,6 +90,58 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "restapp_deletestudent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/restapp/students/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"restapp",
+						"students",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restapp_updatestudent",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"Ghazipur\",\r\n    \"age\": 12,\r\n    \"gender\": \"Male\",\r\n    \"name\": \"Prabhunath\",\r\n    \"studentId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sample/restapp/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"restapp",
+						"students"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
