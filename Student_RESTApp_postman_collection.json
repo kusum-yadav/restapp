@@ -142,6 +142,56 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "restapp_getSubjectsOfaStudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/restapp/students/3/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"restapp",
+						"students",
+						"3",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restapp_getallsubjects",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/sample/restapp/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"restapp",
+						"subjects"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
