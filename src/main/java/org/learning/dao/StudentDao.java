@@ -10,11 +10,12 @@ public class StudentDao {
 
 	public StudentDao() {
 		super();
+		SubjectDao sdao = new SubjectDao();
 		list = new ArrayList<Student>();
-		list.add(new Student(1, "kusum", 26, "Female", "Ghazipur"));
-		list.add(new Student(2, "Prabhu", 12, "Male", "Ghazipur"));
-		list.add(new Student(3, "Sushma", 23, "Female", "Hyderabad"));
-		list.add(new Student(4, "Sashi", 25, "Male", "Rachi"));
+		list.add(new Student(1, "kusum", 26, "Female", "Ghazipur", 1, sdao.getClassSubject(1)));
+		list.add(new Student(2, "Prabhu", 12, "Male", "Ghazipur", 2, sdao.getClassSubject(2)));
+		list.add(new Student(3, "Sushma", 23, "Female", "Hyderabad", 3, sdao.getClassSubject(3)));
+		list.add(new Student(4, "Sashi", 25, "Male", "Rachi", 1, sdao.getClassSubject(1)));
 	}
 
 	public List<Student> getStudentsList() {

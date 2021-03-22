@@ -13,7 +13,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.learning.dao.StudentDao;
+import org.learning.dao.SubjectDao;
 import org.learning.entity.Student;
+import org.learning.entity.Subject;
 
 @Path("students")
 public class StudentRestController {
@@ -56,5 +58,21 @@ public class StudentRestController {
 	public List<Student> updateStudentRecord(Student student)
 	{
 		return studentDao.updateStudent(student);
+	}
+	
+	@Path("/{studentId}/subjects")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Subject> getAllSubjectsForaStudent(@PathParam("studentId")int studentId)
+	{
+		Student student= studentDao.getStudent(studentId);
+		if(student!=null)
+		{
+			int class_std= student.getClass_std();
+			SubjectDao sdao = new SubjectDao();
+			return sdao.getClassSubject(class_std);
+		}
+		
+		return null;
 	}
 }

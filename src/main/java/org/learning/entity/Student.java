@@ -1,5 +1,7 @@
 package org.learning.entity;
 
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -9,17 +11,37 @@ public class Student {
 	int age;
 	String gender;
 	String address;
-
-	public Student() {
-
+	int class_std;
+	public int getClass_std() {
+		return class_std;
 	}
 
-	public Student(int studentId, String name, int age, String gender, String address) {
+	public void setClass_std(int class_std) {
+		this.class_std = class_std;
+	}
+
+	List<Subject> subjects;
+
+	public Student(int studentId, String name, int age, String gender, String address, int class_std, List<Subject>  subjects) {
+		super();
 		this.studentId = studentId;
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
 		this.address = address;
+		this.class_std=class_std;
+		this.subjects = subjects;
+	}
+
+	public List<Subject>  getSubjects() {
+		return subjects;
+	}
+
+	public void setSubjects(List<Subject>  subjects) {
+		this.subjects = subjects;
+	}
+
+	public Student() {
 
 	}
 
